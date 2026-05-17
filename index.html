@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plano Quick Care &mdash; Auto Repair in Plano, IL</title>
+  <meta name="description" content="Plano Quick Care: oil changes, tire rotation, auto maintenance. Fast in, fast out. Call (630) 273-2643." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root { --bg:#0e1014; --surface:#181b22; --surface-2:#21242c; --line:#2a2e38; --ink:#eef0f3; --ink-soft:#9aa1ad; --ink-dim:#5e6470; --yellow:#fdc500; --yellow-deep:#c89d00; --signal:#d62828; --shadow:0 8px 24px rgba(0,0,0,0.6); --shadow-lift:0 16px 40px rgba(0,0,0,0.8); }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { font-family:'Manrope', sans-serif; color:var(--ink); background:var(--bg); line-height:1.6; -webkit-font-smoothing:antialiased; }
+    h1, h2, h3, .display { font-family:'Oswald', sans-serif; font-weight:700; line-height:1.05; letter-spacing:0.01em; }
+    header { position:sticky; top:0; z-index:100; background:rgba(14,16,20,0.92); backdrop-filter:blur(10px); border-bottom:1px solid var(--line); }
+    .nav { max-width:1200px; margin:0 auto; padding:1rem 1.5rem; display:flex; align-items:center; justify-content:space-between; }
+    .logo { font-family:'Oswald', sans-serif; font-weight:700; font-size:1.5rem; letter-spacing:0.06em; text-transform:uppercase; }
+    .logo .accent { color:var(--yellow); }
+    .nav-call { display:inline-flex; align-items:center; padding:0.8rem 1.5rem; border-radius:6px; background:var(--yellow); color:#0e1014; text-decoration:none; font-weight:800; font-size:0.92rem; letter-spacing:0.06em; text-transform:uppercase; box-shadow:0 4px 14px rgba(253,197,0,0.3); transition:transform 0.15s, background 0.15s; }
+    .nav-call:hover { background:#fed847; transform:translateY(-1px); }
+    .hero { padding:5rem 1.5rem 6rem; background:radial-gradient(ellipse 65% 50% at 75% 35%, rgba(253,197,0,0.10), transparent 70%), linear-gradient(180deg, var(--bg) 0%, #15171c 100%); }
+    .hero-inner { max-width:1200px; margin:0 auto; display:grid; grid-template-columns:1.15fr 1fr; gap:4rem; align-items:center; }
+    .hero-eyebrow { display:inline-block; padding:0.45rem 1rem; background:rgba(253,197,0,0.15); color:var(--yellow); border:1px solid rgba(253,197,0,0.35); border-radius:4px; font-size:0.78rem; font-weight:800; letter-spacing:0.15em; text-transform:uppercase; margin-bottom:1.5rem; }
+    .hero h1 { font-size:clamp(3.5rem, 7vw, 6.5rem); margin-bottom:1.5rem; text-transform:uppercase; }
+    .hero h1 .accent { color:var(--yellow); display:block; }
+    .hero-tagline { font-size:1.2rem; color:var(--ink-soft); margin-bottom:2.5rem; max-width:32rem; }
+    .hero-ctas { display:flex; gap:1rem; flex-wrap:wrap; margin-bottom:2rem; }
+    .btn-primary { display:inline-flex; align-items:center; padding:1.3rem 2.6rem; border-radius:6px; background:var(--yellow); color:#0e1014; text-decoration:none; font-weight:800; font-size:1.15rem; letter-spacing:0.06em; text-transform:uppercase; box-shadow:0 8px 28px rgba(253,197,0,0.35); transition:transform 0.15s, background 0.15s; animation:pulse-yellow 2.5s ease-in-out infinite; }
+    @keyframes pulse-yellow { 0%,100% { box-shadow:0 8px 28px rgba(253,197,0,0.35); } 50% { box-shadow:0 8px 36px rgba(253,197,0,0.6); } }
+    .btn-primary:hover { background:#fed847; transform:translateY(-3px); animation:none; }
+    .btn-outline { display:inline-flex; align-items:center; padding:1.25rem 2.2rem; border-radius:6px; border:1.5px solid var(--ink-dim); color:var(--ink); text-decoration:none; font-weight:700; font-size:0.95rem; letter-spacing:0.05em; text-transform:uppercase; transition:border-color 0.15s, color 0.15s; }
+    .btn-outline:hover { border-color:var(--yellow); color:var(--yellow); }
+    .hero-meta { display:flex; gap:2rem; flex-wrap:wrap; padding-top:2rem; border-top:1px solid var(--line); color:var(--ink-soft); font-size:0.9rem; }
+    .hero-meta-item strong { color:var(--ink); font-weight:700; }
+    .hero-photo { border-radius:8px; overflow:hidden; box-shadow:var(--shadow-lift); border:1px solid var(--line); aspect-ratio:4/5; position:relative; }
+    .hero-photo img { width:100%; height:100%; object-fit:cover; filter:contrast(1.05) saturate(0.85); }
+    section { padding:5rem 1.5rem; }
+    .wrap { max-width:1200px; margin:0 auto; }
+    .section-head { text-align:center; margin-bottom:3.5rem; }
+    .section-head .eyebrow { display:inline-block; color:var(--yellow); font-size:0.8rem; font-weight:800; letter-spacing:0.22em; text-transform:uppercase; margin-bottom:0.8rem; }
+    .section-head h2 { font-size:clamp(2.5rem, 5vw, 4rem); text-transform:uppercase; }
+    .about { background:var(--surface); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+    .about-grid { display:grid; grid-template-columns:1.2fr 1fr; gap:4rem; align-items:center; }
+    .about p { color:var(--ink-soft); margin-bottom:1.1rem; font-size:1.05rem; }
+    .stats { display:grid; grid-template-columns:1fr 1fr; gap:1.4rem; }
+    .stat { background:var(--surface-2); border:1px solid var(--line); padding:1.5rem; border-radius:8px; text-align:center; }
+    .stat-num { font-family:'Oswald', sans-serif; font-size:2.8rem; color:var(--yellow); line-height:1; }
+    .stat-label { font-size:0.78rem; color:var(--ink-soft); letter-spacing:0.1em; text-transform:uppercase; font-weight:700; margin-top:0.3rem; }
+    .services-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:1.5rem; }
+    .service-card { background:var(--surface); padding:2rem; border-radius:8px; border:1px solid var(--line); transition:transform 0.2s, border-color 0.2s; }
+    .service-card:hover { transform:translateY(-4px); border-color:var(--yellow-deep); }
+    .service-card h3 { font-size:1.7rem; text-transform:uppercase; margin-bottom:0.4rem; }
+    .service-card .price { color:var(--yellow); font-weight:800; font-size:1.4rem; margin-bottom:0.8rem; font-family:'Oswald', sans-serif; letter-spacing:0.04em; }
+    .service-card .desc { color:var(--ink-soft); font-size:0.95rem; line-height:1.5; }
+    .price-note { text-align:center; color:var(--ink-dim); font-size:0.85rem; margin-top:2rem; font-style:italic; }
+    .map-wrap { border-radius:8px; overflow:hidden; border:1px solid var(--line); box-shadow:var(--shadow); }
+    .map-wrap iframe { width:100%; height:380px; border:0; display:block; filter:invert(0.92) hue-rotate(180deg) saturate(0.6); }
+    .cta-band { background:linear-gradient(135deg, #1a1a18 0%, #0e1014 100%); border-top:1px solid var(--yellow-deep); text-align:center; padding:5rem 1.5rem; }
+    .cta-band h2 { font-size:clamp(2.5rem, 5vw, 4rem); text-transform:uppercase; margin-bottom:0.8rem; }
+    .cta-band h2 .accent { color:var(--yellow); }
+    .cta-band p { color:var(--ink-soft); margin-bottom:2.5rem; font-size:1.1rem; }
+    footer { background:#070809; color:var(--ink-soft); padding:3rem 1.5rem 2.5rem; text-align:center; border-top:1px solid var(--line); }
+    footer .footer-logo { font-family:'Oswald', sans-serif; font-weight:700; font-size:1.4rem; letter-spacing:0.1em; color:var(--ink); margin-bottom:1rem; text-transform:uppercase; }
+    footer .footer-logo .accent { color:var(--yellow); }
+    footer a { color:var(--ink-soft); text-decoration:none; margin:0 0.8rem; font-size:0.9rem; }
+    footer a:hover { color:var(--yellow); }
+    footer .copyright { font-size:0.8rem; color:var(--ink-dim); margin-top:1.5rem; }
+    @media (max-width:800px) { .hero { padding:3rem 1.5rem 4rem; } .hero-inner { grid-template-columns:1fr; gap:2.5rem; } .hero-photo { aspect-ratio:4/3; } .about-grid { grid-template-columns:1fr; gap:2.5rem; } section { padding:3.5rem 1.5rem; } body { padding-bottom:5rem; } }
+    .sticky-cta { display:none; }
+    @media (max-width:800px) { .sticky-cta { display:flex; position:fixed; bottom:0; left:0; right:0; background:rgba(14,16,20,0.97); backdrop-filter:blur(10px); border-top:1px solid var(--yellow-deep); padding:0.8rem 1rem; z-index:99; } .sticky-cta .btn-primary { width:100%; justify-content:center; animation:none; padding:1rem; font-size:1.05rem; } }
+  </style>
+</head>
+<body>
+  <header><nav class="nav">
+    <div class="logo">Plano <span class="accent">Quick Care</span></div>
+    <a class="nav-call" href="tel:6302732643">Call (630) 273-2643</a>
+  </nav></header>
+  <section class="hero"><div class="hero-inner">
+    <div>
+      <span class="hero-eyebrow">Plano, IL &middot; Auto Shop</span>
+      <h1>Fast oil changes.<span class="accent">Honest mechanics.</span></h1>
+      <p class="hero-tagline">Oil changes, tire rotation, brakes, alignments, diagnostics, maintenance. Fast in, fast out, no upsells you don't need.</p>
+      <div class="hero-ctas">
+        <a class="btn-primary" href="tel:6302732643">Call Now</a>
+        <a class="btn-outline" href="#services">View Services</a>
+      </div>
+      <div class="hero-meta">
+        <div class="hero-meta-item"><strong>1001 W US Hwy 34</strong> &middot; Plano, IL 60545</div>
+        <div class="hero-meta-item">Open <strong>Mon&ndash;Sat</strong></div>
+      </div>
+    </div>
+    <div class="hero-photo"><!-- REPLACE WITH REAL PHOTO --><img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=900&q=80" alt="Auto shop mechanic working on a car" /></div>
+  </div></section>
+  <section class="about"><div class="wrap"><div class="about-grid">
+    <div>
+      <div class="section-head" style="text-align:left; margin-bottom:1.5rem;">
+        <span class="eyebrow">About the shop</span>
+        <h2 style="font-size:clamp(2rem, 4vw, 3rem);">Quick. Fair. Done right.</h2>
+      </div>
+      <p>Plano Quick Care does the work most shops drag out: oil changes in under 30 minutes, tire rotations, brake checks, fluid top-offs. We do the bigger work too &mdash; alignments, diagnostics, suspension &mdash; but we won't sell you what your car doesn't need.</p>
+      <p>Walk in or call ahead. We'll have your car back to you before lunch.</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><div class="stat-num">30 MIN</div><div class="stat-label">Oil Change</div></div>
+      <div class="stat"><div class="stat-num">6</div><div class="stat-label">Days a Week</div></div>
+      <div class="stat"><div class="stat-num">ALL</div><div class="stat-label">Makes &amp; Models</div></div>
+      <div class="stat"><div class="stat-num">$$</div><div class="stat-label">Honest Pricing</div></div>
+    </div>
+  </div></div></section>
+  <section id="services"><div class="wrap">
+    <div class="section-head"><span class="eyebrow">The Services</span><h2>What we do</h2></div>
+    <div class="services-grid">
+      <div class="service-card"><h3>Oil Change</h3><div class="price">$45 &#10033;</div><div class="desc">Conventional, synthetic blend, or full synthetic. Filter included.</div></div>
+      <div class="service-card"><h3>Tire Rotation</h3><div class="price">$25 &#10033;</div><div class="desc">All four tires rotated to maximize tread life.</div></div>
+      <div class="service-card"><h3>Brake Service</h3><div class="price">$180 &#10033;</div><div class="desc">Pads + inspection. Rotors extra if needed.</div></div>
+      <div class="service-card"><h3>Alignment</h3><div class="price">$95 &#10033;</div><div class="desc">Four-wheel alignment, road tested.</div></div>
+      <div class="service-card"><h3>Diagnostic</h3><div class="price">$80 &#10033;</div><div class="desc">Check Engine light, electrical, performance issues.</div></div>
+      <div class="service-card"><h3>Battery Test &amp; Replace</h3><div class="price">$160 &#10033;</div><div class="desc">Test free. Replacement includes terminal cleaning.</div></div>
+    </div>
+    <p class="price-note">&#10033; Prices shown are placeholders &mdash; confirm with the shop before launch.</p>
+  </div></section>
+  <section><div class="wrap">
+    <div class="section-head"><span class="eyebrow">Find us</span><h2>1001 W US Hwy 34</h2></div>
+    <div class="map-wrap"><iframe src="https://www.google.com/maps?q=1001+W+US+Hwy+34+Plano+IL+60545&output=embed" allowfullscreen loading="lazy"></iframe></div>
+  </div></section>
+  <section class="cta-band">
+    <h2>Car making <span class="accent">a noise?</span></h2>
+    <p>Call and we'll get you in. Most days, same-day service.</p>
+    <a class="btn-primary" href="tel:6302732643">Call (630) 273-2643</a>
+  </section>
+  <footer>
+    <div class="footer-logo">Plano <span class="accent">Quick Care</span></div>
+    <div><a href="tel:6302732643">Call</a> &middot; <a href="https://maps.apple.com/?q=1001+W+US+Hwy+34+Plano+IL+60545">Directions</a></div>
+    <div class="copyright">&copy; 2026 Plano Quick Care &middot; 1001 W US Hwy 34, Plano, IL 60545</div>
+  </footer>
+  <div class="sticky-cta"><a class="btn-primary" href="tel:6302732643">Call Now</a></div>
+</body>
+</html>
